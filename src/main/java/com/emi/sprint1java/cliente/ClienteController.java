@@ -51,35 +51,11 @@ public class ClienteController {
 
        var uri = uriBuilder
          .path("/clientes/{id}")
-         .buildAndExpand(user.getId_usuario())
+         .buildAndExpand(user.getId())
          .toUri();
 
          return ResponseEntity
          .created(uri)
          .body(ClienteResponse.from(user));
     }
-
-//     // DELETE
-//     @DeleteMapping("/{id}")
-//     @Operation(
-//             summary = "Deletar cadastro do cliente",
-//             description = "Deleta o cadastro do cliente")
-//     @ApiResponse(responseCode = "200", description = "Cadastro do cliente deletado")
-//     @ApiResponse(responseCode = "404", description = "Cliente não encontrado")
-//     @ResponseStatus(HttpStatus.NO_CONTENT)
-//     public 
-//     }
-
-//     // PUT
-//     @PutMapping("/{id}")
-//     @Operation(
-//             summary = "Atualizar cadastro do cliente",
-//             description = "Atualiza cadastro do cliente")
-//     @ApiResponse(responseCode = "200", description = "Cadastro do cliente atualizado")
-//     @ApiResponse(responseCode = "404", description = "Cliente não encontrado")
-//     public 
-//     }
-
-
-    
 }

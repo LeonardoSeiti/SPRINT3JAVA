@@ -1,25 +1,22 @@
 package com.emi.sprint1java.cliente.dto;
 
-import java.time.LocalDateTime;
-
 import com.emi.sprint1java.cliente.Cliente;
 
 public record ClienteRequest(
-    String ds_email,
-    String ds_senha,
-    String nm_usuario,
-    String nm_empresa,
-    String nm_departamento
+    String email,
+    String senha,
+    String usuario,
+    String empresa,
+    String departamento
 
 ) {
    public Cliente toModel() {
         return Cliente.builder()
-                .ds_email(ds_email)
-                .ds_senha(ds_senha)
-                .nm_usuario(nm_usuario)
-                .nm_empresa(nm_empresa)
-                .nm_departamento(nm_departamento)
-                .dt_procura(LocalDateTime.now())
+                .email(email)
+                .senha(senha)
+                .usuario(usuario)
+                .empresa(empresa)
+                .departamento(departamento)
                 .build();
     } 
 }

@@ -17,17 +17,17 @@ public class ClienteService {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    public List<Cliente> findByCliente(String nm_usuario) {
-       return repository.findByClienteContainingIgnoreCase(nm_usuario);
+    public List<Cliente> findByCliente(String usuario) {
+       return repository.findByUsuarioContainingIgnoreCase(usuario);
     }
  
     public Cliente save(Cliente cliente) {
-        cliente.setDs_senha(passwordEncoder.encode(cliente.getDs_senha()));
+        cliente.setSenha(passwordEncoder.encode(cliente.getSenha()));
         return repository.save(cliente);
     }
 
-    public ClienteProfileResponse getClientProfile(String ds_email){
-        return repository.findByEmail(ds_email)
+    public ClienteProfileResponse getClientProfile(String email){
+        return repository.findByEmail(email)
         .map(ClienteProfileResponse::new)
         .orElseThrow(() -> new UsernameNotFoundException("Nome de usuário não encontrado")); 
     }

@@ -6,6 +6,6 @@ public record ClienteProfileResponse(
     String nm_departamento
 ) {
     public ClienteProfileResponse(Cliente cliente) {
-        this(cliente.getNm_usuario(), cliente.getNm_empresa(), cliente.getNm_departamento());
+        this(cliente.getUsuario(), cliente.getEmpresa(), cliente.getDepartamento());
     }
 }

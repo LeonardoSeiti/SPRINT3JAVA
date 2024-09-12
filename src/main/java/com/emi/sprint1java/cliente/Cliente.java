@@ -1,7 +1,5 @@
 package com.emi.sprint1java.cliente;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,13 +19,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Cliente {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_usuario;
-    private String ds_email;
-    private String ds_senha;
+    private Long id;
+    private String email;
+    private String senha;
     @NotBlank
-    private String nm_usuario;
+    private String usuario;
     @NotBlank
-    private String nm_empresa;
-    private String nm_departamento;
-    private LocalDateTime dt_procura;
+    private String empresa;
+    private String departamento;
 }
