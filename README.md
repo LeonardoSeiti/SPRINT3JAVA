@@ -3,7 +3,6 @@ O Emi é um assistente virtual inteligente projetado para ajudar as empresas a o
 
 ## Integrantes do grupo
 
-- RM 97898 - Ana Clara Aguiar Guimarães Perin Remotto<br>
 - RM 99573 - Ezequiel Bispo de Jesus<br>
 - RM 551873 - Helena Cristina Rocha Medeiros
 - RM 98126 - Kelvin Gomes
@@ -24,11 +23,6 @@ Após inserir os dados, poderá ter acesso ao serviço de atendimento ao cliente
 
 ## Documentação do projeto usando swagger
 http://localhost:8080/swagger-ui/index.html#/docs
-
-## Imagens
-![Diagrama de intidades](https://github.com/EzequielBispo/SPRINT1JAVA/assets/73908875/c4e01fab-edab-440f-877a-4be5be264f39>
-)
-![DER_SPRINT1](https://github.com/LeonardoSeiti/SP1JV/assets/124947715/8d9740ea-c9b5-4f26-8e6f-4de69d04944a)
 
 ## Link do vídeo
 [Vídeo Pitch](https://www.youtube.com/watch?v=oEyB0rZntmE)
@@ -51,22 +45,3 @@ http://localhost:8080/swagger-ui/index.html#/docs
 |200| Usuário criado
 |500| Falta ou excesso de argumentos
 ---
-
-`PUT` {/id} <br>
-#### Códigos de Status
-
-|código|descrição
-|------|---------
-|201| Dados atualizados
-|404| Conta não encontrada
----
-
-`DELETE` {/id} <br>
-#### Códigos de Status
-
-|código|descrição
-|------|---------
-|200| Conta deletada com sucesso
-|404| Conta não encontrada
----
-
