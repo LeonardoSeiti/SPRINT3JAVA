@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
-public class Sprint1JavaApplication {
+public class EmiApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(Sprint1JavaApplication.class, args);
+        SpringApplication.run(EmiApplication.class, args);
     }
 
 }
