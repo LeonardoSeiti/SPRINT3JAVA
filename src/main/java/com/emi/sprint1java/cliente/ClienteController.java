@@ -31,9 +31,9 @@ public class ClienteController {
     // GET
     @GetMapping("/perfil")
     @Operation(
-            summary = "Buscar cliente por ID",
-            description = "Retorna pesquisa de cliente por ID")
-    @ApiResponse(responseCode = "200", description = "Cadastro do cliente encontrado")
+            summary = "Buscar cliente",
+            description = "Retorna pesquisa de cliente")
+    @ApiResponse(responseCode = "200", description = "Resultado da pesquisa")
     @ApiResponse(responseCode = "404", description = "Cliente não encontrado")
     public ClienteProfileResponse getClienteProfile(){
         var cliente = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
@@ -44,8 +44,8 @@ public class ClienteController {
     @PostMapping
     @Operation(
             summary = "Salvar cadastro cliente",
-            description = "Salva cadastro do cliente")
-    @ApiResponse(responseCode = "201", description = "Cadastro do cliente salvo")
+            description = "Salva cadastro do cliente, com os campos obrigatórios")
+    @ApiResponse(responseCode = "201", description = "Cadastro do cliente criado")
     @ApiResponse(responseCode = "400", description = "Erro ao salvar cliente")
     public ResponseEntity<ClienteResponse> create(@RequestBody ClienteRequest clienteRequest,UriComponentsBuilder uriBuilder) {
        var cliente = service.save(clienteRequest.toModel());
