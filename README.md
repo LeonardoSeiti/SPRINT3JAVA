@@ -35,7 +35,7 @@ Após inserir os dados, poderá ter acesso ao serviço de atendimento do Emi
 
 ## Link demonstração funcionamento do projeto
 
-[Youtube](https://youtu.be/PmA8NxV2Ehc)
+[Youtube](https://www.youtube.com/watch?v=JbCCxfzn_r4)
 
 ## Documentação do projeto usando swagger
 [Docs](https://api-sprint-emi.azurewebsites.net/swagger-ui/index.html)
