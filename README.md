@@ -22,6 +22,8 @@ Leonardo Seiti de Souza
 - [Java JDK 17](https://www.oracle.com/br/java/technologies/downloads/#java17)
 - IDE VSCode or InteliJ
 - [Repositório](https://github.com/LeonardoSeiti/SPRINT3JAVA.git)
+- [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)
+- [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
 ## Instruções / How To
 O usuário para se cadastrar deve inserir:
