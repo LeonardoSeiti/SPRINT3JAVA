@@ -8,17 +8,15 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-
-
 import java.util.List;
 
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping("/api/cliente")
 @Tag(name = "Cliente")
-public class ClienteController {
+public class ClienteApiController {
 
     @Autowired
     ClienteService service;
@@ -29,7 +27,7 @@ public class ClienteController {
     }
 
     // GET
-    @GetMapping("/perfil")
+    @GetMapping("/api/perfil")
     @Operation(
             summary = "Buscar cliente",
             description = "Retorna pesquisa de cliente")
@@ -51,7 +49,7 @@ public class ClienteController {
        var cliente = service.save(clienteRequest.toModel());
 
        var uri = uriBuilder
-         .path("/clientes/{id}")
+         .path("/api/clientes/{id}")
          .buildAndExpand(cliente.getId())
          .toUri();
 

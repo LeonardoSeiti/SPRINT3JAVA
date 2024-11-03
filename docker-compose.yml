@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: emi-postgres
+    environment:
+      POSTGRES_DB: emi
+      POSTGRES_USER: emi
+      POSTGRES_PASSWORD: emi
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

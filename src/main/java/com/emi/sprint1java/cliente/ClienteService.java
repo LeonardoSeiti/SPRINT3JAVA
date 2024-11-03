@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ClienteService {
-
     @Autowired
     ClienteRepository repository;
 
@@ -31,5 +30,4 @@ public class ClienteService {
         .map(ClienteProfileResponse::new)
         .orElseThrow(() -> new UsernameNotFoundException("Nome de usuário não encontrado")); 
     }
-
 }
