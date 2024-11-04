@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AuthController {
+public class AuthApiController {
     
     @Autowired
     private AuthService authService;
 
-    @PostMapping("/login")
+    @PostMapping("/api/login")
     public Token login(@RequestBody Credentials credentials){
         return authService.login(credentials);
     }
 
 
-    @GetMapping("/logout")
+    @GetMapping("/api/logout")
     public String logout(){
         return "Logout";
     }

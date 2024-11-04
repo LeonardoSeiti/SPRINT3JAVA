@@ -16,16 +16,12 @@ public class SecurityConfig {
     public SecurityFilterChain config(HttpSecurity http, AuthorizationFilter authorizationFilter) throws Exception {
 
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.GET, "/login").permitAll()
-                .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                .requestMatchers(HttpMethod.POST, "/cliente").permitAll()
-                .requestMatchers(HttpMethod.GET, "/logout").permitAll()
-                .requestMatchers("/docs/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                .requestMatchers("/actuator/**", "/health/**").permitAll()
-                .requestMatchers("/login?/**", "/logout/**").permitAll()
-                .anyRequest().authenticated())
-                .oauth2Login(Customizer.withDefaults())
-                .formLogin(Customizer.withDefaults());
+                .requestMatchers(HttpMethod.POST, "/login", "/api/login", "/api/cliente/**","/cliente").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/cliente", "/api/cliente/perfil").permitAll()
+                .requestMatchers("/docs/**", "/swagger-ui/**", "/v3/api-docs/**", "/actuator/**","/health/**").permitAll()
+                .anyRequest().authenticated()
+        );
+        http.oauth2Login(Customizer.withDefaults());
         http.csrf(csrf -> csrf.disable());
         http.addFilterBefore(authorizationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();

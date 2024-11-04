@@ -27,9 +27,9 @@ public class ClienteApiController {
     }
 
     // GET
-    @GetMapping("/api/perfil")
+    @GetMapping("/perfil")
     @Operation(
-            summary = "Buscar cliente",
+            summary = "Biuscar clente",
             description = "Retorna pesquisa de cliente")
     @ApiResponse(responseCode = "200", description = "Resultado da pesquisa")
     @ApiResponse(responseCode = "404", description = "Cliente não encontrado")
@@ -49,7 +49,7 @@ public class ClienteApiController {
        var cliente = service.save(clienteRequest.toModel());
 
        var uri = uriBuilder
-         .path("/api/clientes/{id}")
+         .path("/clientes/{id}")
          .buildAndExpand(cliente.getId())
          .toUri();
 

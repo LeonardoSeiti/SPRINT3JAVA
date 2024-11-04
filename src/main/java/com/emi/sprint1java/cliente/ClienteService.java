@@ -30,4 +30,5 @@ public class ClienteService {
         .map(ClienteProfileResponse::new)
         .orElseThrow(() -> new UsernameNotFoundException("Nome de usuário não encontrado")); 
     }
+
 }
