@@ -8,17 +8,15 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-
-
 import java.util.List;
 
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping("/api/cliente")
 @Tag(name = "Cliente")
-public class ClienteController {
+public class ClienteApiController {
 
     @Autowired
     ClienteService service;
@@ -31,7 +29,7 @@ public class ClienteController {
     // GET
     @GetMapping("/perfil")
     @Operation(
-            summary = "Buscar cliente",
+            summary = "Biuscar clente",
             description = "Retorna pesquisa de cliente")
     @ApiResponse(responseCode = "200", description = "Resultado da pesquisa")
     @ApiResponse(responseCode = "404", description = "Cliente não encontrado")
