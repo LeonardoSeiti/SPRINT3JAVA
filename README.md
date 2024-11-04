@@ -36,6 +36,11 @@ O usuário para se cadastrar deve inserir:
 
 Após inserir os dados, poderá ter acesso ao serviço de atendimento do Emi
 
+## Como rodar o Docker compose
+
+```js
+docker-compose up -d
+```
 ## Link demonstração funcionamento do projeto
 
 [Youtube](https://www.youtube.com/watch?v=UV1wnMfr8NM)
