@@ -24,6 +24,7 @@ Leonardo Seiti de Souza
 - [Repositório](https://github.com/LeonardoSeiti/SPRINT3JAVA.git)
 - [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)
 - [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [Docker desktop](https://docs.docker.com/desktop/install/windows-install/)
 
 ## Instruções / How To
 O usuário para se cadastrar deve inserir:
@@ -37,13 +38,10 @@ Após inserir os dados, poderá ter acesso ao serviço de atendimento do Emi
 
 ## Link demonstração funcionamento do projeto
 
-[Youtube](https://www.youtube.com/watch?v=JbCCxfzn_r4)
-
-## Documentação do projeto usando swagger
-[Docs](https://api-sprint-emi.azurewebsites.net/swagger-ui/index.html)
+[Youtube](https://www.youtube.com/watch?v=UV1wnMfr8NM)
 
 ## EndPoints
-`POST` /cliente <br>
+`POST` /api/cliente <br>
 
 ### Corpo do requisição 
 ```js
@@ -65,7 +63,7 @@ Após inserir os dados, poderá ter acesso ao serviço de atendimento do Emi
 | 401| Argumento inválido  
 | 404| Recurso não encontrado / Não autorizado  
 
-`POST` /login <br>
+`POST` /api/login <br>
 
 ### Corpo do requisição 
 ```js
@@ -86,7 +84,7 @@ Após inserir os dados, poderá ter acesso ao serviço de atendimento do Emi
 ---
 
 
-`GET` /cliente/perfil <br>
+`GET` /api/cliente/perfil <br>
 ## Deve ser inserido o token ao logar anteriormente
 ### Resposta da requisição 
 ```js
